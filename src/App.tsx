@@ -1,8 +1,17 @@
-import * as SC from './app.styling';
+import * as SC from './App.styling';
 
 function App() {
   return (
     <SC.Wrapper>
+      <SC.Box></SC.Box>
+      <SC.Box></SC.Box>
+      <SC.Box></SC.Box>
+      <SC.Box></SC.Box>
+      <SC.Box></SC.Box>
+      <SC.Box></SC.Box>
+      <SC.Box></SC.Box>
+      <SC.Box></SC.Box>
+      <SC.Box></SC.Box>
       <SC.Box></SC.Box>
       <SC.Box></SC.Box>
       <SC.Box></SC.Box>

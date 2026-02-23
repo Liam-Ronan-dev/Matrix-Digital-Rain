@@ -1,9 +1,21 @@
 import styled from 'styled-components';
-import { ANIMATION_MAX_HEIGHT, ANIMATION_MIN_HEIGHT } from './constants';
+import {
+  ANIMATION_MAX_HEIGHT,
+  ANIMATION_MIN_HEIGHT,
+  MAX_ANIMATION_SPEED,
+  MIN_ANIMATION_SPEED,
+} from './constants';
+
+export const getRandomSpeed = (): number => {
+  const minSpeed = Math.ceil(MIN_ANIMATION_SPEED);
+  const maxSpeed = Math.floor(MAX_ANIMATION_SPEED);
+
+  return Math.floor(Math.random() * (maxSpeed - minSpeed + 1) + minSpeed);
+};
 
 export const Wrapper = styled.div`
   display: flex;
-  gap: 5px;
+  gap: 50px;
 `;
 
 export const Box = styled.div`
@@ -11,7 +23,7 @@ export const Box = styled.div`
   height: 7em;
   position: relative;
   border: 3px dotted red;
-  animation: verticalMove 2s linear infinite;
+  animation: verticalMove ${getRandomSpeed}s linear infinite;
 
   @keyframes verticalMove {
     from {
